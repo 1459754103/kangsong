@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五子棋</title>
+    <script>
+        window.onload=function (ev) {
+            var c=document.getElementById("mycanvas");
+            var cx=c.getContext("2d");
+            for (var i = 0; i <15 ; i++) {
+                cx.moveTo(15+i*30,15);
+                cx.lineTo(15+i*30,435);
+                cx.stroke();
+            }
+            for (var i = 0; i <15 ; i++) {
+                cx.moveTo(15,15+i*30);
+                cx.lineTo(435,15+i*30);
+                cx.stroke();
+            }
+            cx.onclick=function () {
+                alert("你好啊 ")
+                // cx.beginPath();
+                // cx.arc(95,50,40,0,2*Math.PI);
+                // cx.stroke();
+            }
+            
+
+        }
+    </script>
+    <style type="text/css">
+        canvas{border:solid 1px black;margin: 100px auto;display: block;box-shadow: 0px 0px 5px black}
+    </style>
+</head>
+<body>
+<canvas id="mycanvas" width="450" height="450"></canvas>
+</body>
+</html>
